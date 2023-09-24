@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class stugracal {
+    public static void main(String[] args) {
+        int marks = 0;
+        int totalMarks = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of subjects : ");
+        int no_of_subjects = sc.nextInt();
+        for(int i = 1; i <= no_of_subjects; i++)
+        {
+            System.out.print("Enter mark of Subject " + i + " (out of 100) : ");
+            marks = sc.nextInt();
+            totalMarks+=marks; //Sum of marks obtained in all subjects
+        }
+        int AvgPercen = totalMarks/no_of_subjects;
+        //Grade Calculation
+        char Grade;
+        if(AvgPercen >= 90)
+        {
+            Grade = 'O';
+        }
+        else if(AvgPercen >= 80)
+        {
+            Grade = 'A';
+        }
+        else if(AvgPercen >= 70)
+        {
+            Grade = 'B';
+        }
+        else if(AvgPercen >= 60)
+        {
+            Grade = 'C';
+        }
+        else{
+            Grade = 'D';
+        }
+        //Displaying Result
+        System.out.println("Total Marks : " + totalMarks + "\nAverage Percentage : " + AvgPercen + "\nGrade : '" + Grade + "'");
+    }
+}
